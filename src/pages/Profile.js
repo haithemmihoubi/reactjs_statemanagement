@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import {ChangeProfile} from "./ChangeProfile";
+import {AppContext} from "../App";
 export function Profile(props) {
+    const {username,setUserName}=useContext(AppContext) ;
     return(
         <div className={"profile"}>
-            <h1>hello profile username is { props.username}</h1>
+            hello profile username is { username}
+            <ChangeProfile />
 
         </div>
     ) ;
